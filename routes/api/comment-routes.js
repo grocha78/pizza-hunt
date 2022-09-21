@@ -1,9 +1,6 @@
-const router = require('require').Router();
+const router = require('express').Router();
 
-const {
-    addComment,
-    removeComment
-} = require('../../controllers/comment-controller');
+const { addComment, removeComment } = require('../../controllers/comment-controller');
 
 // /api/comment/<pizzaId>
 router.route('/:pizzaId').post(addComment);
